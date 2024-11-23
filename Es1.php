@@ -52,6 +52,11 @@
         </tbody>
     </table>
     <br>
+    <p><i>
+        Il seguente codice HTML genera una tabella pitagorica utilizzando PHP per calcolare e popolare dinamicamente i valori. <br>
+        La tabella, stilizzata tramite CSS, presenta un layout centrato con bordi e uno sfondo grigio chiaro per l'intestazione. <br>
+        Ogni riga e colonna è numerata da 1 a 10, con i valori calcolati come il prodotto dei rispettivi numeri. <br>
+    </i></p>
     <button> <a href="index.html" style="text-decoration: none;"> Home </a> </button>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Es3</title>
+    <title>Stringa</title>
     <style>
         html, body {
             height: 100%;

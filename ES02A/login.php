@@ -1,6 +1,5 @@
 
 <?php
-$username;
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST'){
         echo "<h1> Controllo credenziali <br> <br>";
@@ -13,5 +12,5 @@ $username;
             echo "<h2 style=\"color:red;\">Attenzione! Nome utente o password sbagliate. <br> Accesso negato!";
         }
     }
-    echo "<br> <br> <button> <a href=\"../index.html\" style=\"text-decoration: none;\"> Home </a> </button>";
+    echo "<br> <br> <button> <a href=\"index.html\" style=\"text-decoration: none;\"> Home </a> </button>";
 ?>

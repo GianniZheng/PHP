@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <title>Es1</title>
+    <title>Tabella pitagorica</title>
     <style>
         html, body {
             height: 100%;
@@ -31,6 +31,7 @@
         a{
             text-decoration:none;
         }
+
         footer {
             margin-top: auto;
         }

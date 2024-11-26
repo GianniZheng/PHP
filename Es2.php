@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <title>Es2</title>
+    <title>Messaggio di benvenuto</title>
     <style>
         html, body {
             height: 100%;

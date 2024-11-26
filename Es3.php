@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Es3</title>
     <style>
-    .body {
-        width: 100%;
-        height:100vh;
-        display: flex;
-        flex-direction: column;
-    }
-    .container {
-        font-family: monospace;
-        display: flex;
-        width: 70%;
-        gap: 100px;
-    }
+        html, body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        button {
+            width: 60px;
+        }
+        
+        footer {
+            margin-top: auto;
+        }
+
+        .container {
+            font-family: monospace;
+            display: flex;
+            width: 70%;
+            gap: 100px;
+        }
     </style>
 </head>
 <body>
@@ -77,5 +83,9 @@
         Queste operazioni vengono visualizzate in modo sequenziale, mostrando i passaggi intermedi per ciascuna trasformazione.
     </i></p>
     <button> <a href="index.html" style="text-decoration: none; "> Home </a> </button>
+    <footer>
+        <p>Questa pagina dimostra manipolazioni avanzate su stringhe di asterischi utilizzando PHP.</p>
+        <p>File corrente: <strong>Es3.php</strong></p>
+    </footer>
 </body>
 </html>

@@ -1,22 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabella pitagorica</title>
-
+    <title>Es1</title>
     <style>
+        html, body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
         table {
             width: 50%;
             border-collapse: collapse;
             text-align: center;
         }
+
         th, td {
             padding: 8px;
             border: 1px solid #000;
         }
+
         th {
             background-color: #ddd;
+        }
+
+        button {
+            width: 60px;
+        }
+
+        a{
+            text-decoration:none;
+        }
+        footer {
+            margin-top: auto;
         }
     </style>
 </head>
@@ -57,6 +73,10 @@
         La tabella, stilizzata tramite CSS, presenta un layout centrato con bordi e uno sfondo grigio chiaro per l'intestazione. <br>
         Ogni riga e colonna è numerata da 1 a 10, con i valori calcolati come il prodotto dei rispettivi numeri. <br>
     </i></p>
-    <button> <a href="index.html" style="text-decoration: none;"> Home </a> </button>
+    <button> <a href="index.html"> Home </a> </button>
+    <footer>
+        <p>Questa pagina mostra una tabella pitagorica generata dinamicamente con PHP.</p>
+        <p>File corrente: <strong>Es1.php</strong></p>
+    </footer>
 </body>
 </html>

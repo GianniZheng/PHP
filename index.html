@@ -1,16 +1,38 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Esercizi di laboratorio su php</title>
+    <style>
+        html, body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .description {
+            display: flex; 
+            justify-content: center; 
+            font-style: italic;  
+            text-align: center; 
+        }
+
+        footer {
+            margin-top: auto;
+        }
+
+        h1,h2 {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
-    <h1 style="display: flex; justify-content: center;">2024-2025</h1>
-    <h2 style="display: flex; justify-content: center;">Gianni Zheng 5INFA</h2>
-    <p style="display: flex; justify-content: center; font-style: italic;  text-align: center; ">Benvenuti nel mio quaderno informatico, dove troverete esercizi su PHP con un pochino CSS.
-        <br> Attraverso i seguenti link, riportati di seguito, sarete in grado di navigare tra i vari esercizi che svolgerò nel corso del 2024-2025. 
-        <br> Ognuno dei seguenti esercizi è dotato di una descrizione sul lavoro svolto e allo stesso tempo vi e presente un pulsante che vi permettera di ritornare a questa pagina.
+    <h1>Quaderno Informatico 2024-2025</h1>
+    <h2>Gianni Zheng 5INFA</h2>
+    <p class="description">
+        Benvenuti nel mio quaderno informatico, dove troverete esercizi su PHP con un pochino di CSS.<br> 
+        Attraverso i seguenti link, riportati di seguito, sarete in grado di navigare tra i vari esercizi che svolgero' nel corso del 2024-2025.<br> 
+        Ognuno dei seguenti esercizi e' dotato di una descrizione sul lavoro svolto e allo stesso tempo vi e presente un pulsante che vi permettera di ritornare a questa pagina.
     </p>
     <ul>
         <li> <a href="Es1.php"> Es1 </a></li>
@@ -22,5 +44,9 @@
         <br>
         <input type="submit" value="PHP information">
     </form>
+    <footer>
+        <p>Questo e' un quaderno informatico in cui vengono svolti diversi esercizi su PHP.</p>
+        <p>File corrente: <strong>index.html</strong> | File corellati: <strong>info.html</strong></p>
+    </footer>
 </body>
 </html>

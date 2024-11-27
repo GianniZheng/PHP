@@ -2,19 +2,8 @@
 <html lang="it">
 <head>
     <title>Genera Tabella</title>
+    <link rel="stylesheet" href="../style.css">
     <style>
-        html, body {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        table {
-            border-collapse: collapse;
-            width: 50%;
-            margin: 20px auto;
-        }
-
         th, td {
             border: 1px solid black;
             text-align: center;
@@ -28,18 +17,6 @@
         form {
             text-align: center;
             margin-top: 20px;
-        }
-        
-        button {
-            width: 100px;
-        }
-
-        a{
-        text-decoration:none;
-        }
-        
-        footer {
-            margin-top: auto;
         }
     </style>
 </head>
@@ -64,7 +41,7 @@
 
             echo "</table>";
         } else {
-            echo "<p style='text-align: center; color: red;'>Errore: il numero deve essere compreso tra 1 e 10.</p>";
+            echo "<p style='text-align: center;' class='wrong'>Errore: il numero deve essere compreso tra 1 e 10.</p>";
         }
     } else {
         // Visualizzazione del form
@@ -74,11 +51,11 @@
             <select name="numero" id="numero" required>
                 <?php
                 for ($i = 1; $i <= 10; $i++) {
-                    echo "<option value=\"$i\">$i</option>";
+                    echo "<option value='$i'>$i</option>";
                 }
                 ?>
             </select>
-            <button type="submit">Crea tabella</button>
+            <button type="submit" style="width: 100px;">Crea tabella</button>
         </form>
         <?php
     }

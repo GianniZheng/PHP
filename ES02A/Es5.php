@@ -2,25 +2,7 @@
 <html lang="it">
 <head>
   <title>Pagina di login</title>
-  <style>
-    html, body {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    button {
-        width: 60px;
-    }
-
-    a{
-      text-decoration:none;
-    }
-    
-    footer {
-        margin-top: auto;
-    }
-</style>
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
   <h3>Accesso a pagina riservata</h3>
@@ -36,14 +18,14 @@
   </form>
     <?php
     if ($_SERVER['REQUEST_METHOD'] === 'POST'){
-        echo "<h1> Controllo credenziali <br> <br>";
+        echo "<h1> Controllo credenziali </h1> <br>";
         $username = $_POST["nomeutente"];
         $password = $_POST["password"];
 
         if ($username === "admin" && $password === "password") {
-            echo "<h2 style=\"color:green;\">Benvenuto " . $username . " nell'area riservata del sito! </h2>";
+            echo "<h2 class='correct'>Benvenuto " . $username . " nell'area riservata del sito! </h2>";
         }else {
-            echo "<h2 style=\"color:red;\">Attenzione! Nome utente o password sbagliate. <br> Accesso negato! </h2>";
+            echo "<h2 class='wrong'>Attenzione! Nome utente o password sbagliate. <br> Accesso negato! </h2>";
         }
     }
     ?>

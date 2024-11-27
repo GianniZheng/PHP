@@ -2,21 +2,8 @@
 <html lang="en">
 <head>
     <title>Stringa</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        html, body {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        button {
-            width: 60px;
-        }
-        
-        footer {
-            margin-top: auto;
-        }
-
         .container {
             font-family: monospace;
             display: flex;
@@ -82,7 +69,7 @@
         (d) Infine, gli spazi non interruppi vengono riconvertiti progressivamente in asterischi, partendo da destra verso sinistra. <br>
         Queste operazioni vengono visualizzate in modo sequenziale, mostrando i passaggi intermedi per ciascuna trasformazione.
     </i></p>
-    <button> <a href="index.html" style="text-decoration: none; "> Home </a> </button>
+    <button> <a href="index.html"> Home </a> </button>
     <footer>
         <p>Questa pagina dimostra manipolazioni avanzate su stringhe di asterischi utilizzando PHP.</p>
         <p>File corrente: <strong>Es3.php</strong></p>

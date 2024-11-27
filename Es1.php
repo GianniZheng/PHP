@@ -2,19 +2,8 @@
 <html lang="it">
 <head>
     <title>Tabella pitagorica</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        html, body {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        table {
-            width: 50%;
-            border-collapse: collapse;
-            text-align: center;
-        }
-
         th, td {
             padding: 8px;
             border: 1px solid #000;
@@ -22,18 +11,6 @@
 
         th {
             background-color: #ddd;
-        }
-
-        button {
-            width: 60px;
-        }
-
-        a{
-            text-decoration:none;
-        }
-
-        footer {
-            margin-top: auto;
         }
     </style>
 </head>

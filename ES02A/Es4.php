@@ -2,25 +2,7 @@
 <html lang="it">
 <head>
   <title>Pagina di login</title>
-  <style>
-    html, body {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    button {
-        width: 60px;
-    }
-
-    a{
-      text-decoration:none;
-    }
-    
-    footer {
-        margin-top: auto;
-    }
-</style>
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
   <h3>Accesso a pagina riservata</h3>

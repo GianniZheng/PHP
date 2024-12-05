@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            align-items: center;
+            padding: 15px;
+        }
+        h1 {
+            display: flex;
+            justify-content: center;
+            margin: 8px;
+        }
+    </style>
+    <title>Forme normali</title>
+</head>
+<body>
+    <h1>Forme Normali</h1>
+    <p class="intro">
+        La normalizzazione e' un metodo per organizzare le tabelle che ottimizza la struttura dei dati, riducendo le ridondanze, eliminando le anomalie e restituendo piu' tabelle a partire da una tabella iniziale. <br>
+        Questo processo avviene attraverso diverse fasi, chiamate forme normali (prima, seconda, terza, ecc.), che migliorano progressivamente la struttura dei dati, rendendoli piu' efficienti e facili da gestire.
+    </p>
+    <h2>1&deg; Forma normale (1NF)</h2>
+    <p>
+        Una tabella e' in prima forma normale (1NF) quando tutti i suoi attributi hanno un dominio atomico (cioe' sono valori elementari non ulteriormente scomponibili) che non possono ripetersi e per essi esiste una chiave primaria.
+    </p>
+    <table border="1">
+        <thead>
+          <tr>
+            <th>ID_Cliente</th>
+            <th>Nominativo</th>
+            <th>Prodotti acquistati</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>201</td>
+            <td>Giuseppe Ferri</td>
+            <td>Scheda USB</td>
+          </tr>
+          <tr>
+            <td>202</td>
+            <td>Claudia Moretti</td>
+            <td>Speaker, Caricabatterie</td>
+          </tr>
+          <tr>
+            <td>203</td>
+            <td>Francesco Lupo</td>
+            <td>Tablet, Cover</td>
+          </tr>
+        </tbody>
+    </table>     
+    <p>La tabella qui sopra non e' in prima forma normale, la tabella sotto presenta la soluzione:</p>         
+    <table border="1">
+        <thead>
+          <tr>
+            <th>ID_Cliente</th>
+            <th>Nome</th>
+            <th>Cognome</th>
+            <th>Prodotti acquistati</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>201</td>
+            <td>Giuseppe</td>
+            <td>Ferri</td>
+            <td>Scheda USB</td>
+          </tr>
+          <tr>
+            <td>202</td>
+            <td>Claudia</td>
+            <td>Moretti</td>
+            <td>Speaker</td>
+          </tr>
+          <tr>
+            <td>202</td>
+            <td>Claudia</td>
+            <td>Moretti</td>
+            <td>Caricabatterie</td>
+          </tr>
+          <tr>
+            <td>203</td>
+            <td>Francesco</td>
+            <td>Lupo</td>
+            <td>Tablet</td>
+          </tr>
+          <tr>
+            <td>203</td>
+            <td>Francesco</td>
+            <td>Lupo</td>
+            <td>Cover</td>
+          </tr>
+        </tbody>
+    </table>
+    <h2>2&deg; Forma normale (2NF)</h2>
+    <p>
+        Una tabella e' in 2NF se e' in 1NF e non esistono, tra i possibili insiemi di attributi, dipendenze funzionali parziali, ma si hanno solo dipendenze funzionali complete: ogni attributo A che non fa parte della chiave primaria dipende funzionalmente dalla chiave primaria e non da un sottoinsieme di essa.
+    </p>    
+    <div class="container">
+
+    </div>
+    <p><i>
+        Il seguente codice HTML genera una tabella pitagorica utilizzando PHP per calcolare e popolare dinamicamente i valori. <br>
+        La tabella, stilizzata tramite CSS, presenta un layout centrato con bordi e uno sfondo grigio chiaro per l'intestazione. <br>
+        Ogni riga e colonna e' numerata da 1 a 10, con i valori calcolati come il prodotto dei rispettivi numeri. <br>
+    </i></p>
+    <button> <a href="index.html"> Home </a> </button>
+    <footer>
+        <p>Questa pagina dimostra manipolazioni avanzate su stringhe di asterischi utilizzando PHP.</p>
+        <p>File corrente: <strong>normalizzazione.html</strong></p>
+    </footer>
+</body>
+</html>

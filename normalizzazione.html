@@ -3,19 +3,35 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            align-items: center;
-            padding: 15px;
+        .main {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          padding: 15px;
         }
         h1 {
-            display: flex;
-            justify-content: center;
-            margin: 8px;
+          display: flex;
+          justify-content: center;
+          margin: 8px;
+        }
+        .table-container {
+          width: 80%;
+          display: flex;
+          gap: 20px;
+        }
+        th, td {
+          padding: 8px;
+          border: 1px solid #000;
+        }
+        th {
+          background-color: #ddd;
         }
     </style>
     <title>Forme normali</title>
 </head>
 <body>
+  <div class="main">
     <h1>Forme Normali</h1>
     <p class="intro">
         La normalizzazione e' un metodo per organizzare le tabelle che ottimizza la struttura dei dati, riducendo le ridondanze, eliminando le anomalie e restituendo piu' tabelle a partire da una tabella iniziale. <br>
@@ -23,7 +39,7 @@
     </p>
     <h2>1&deg; Forma normale (1NF)</h2>
     <p>
-        Una tabella e' in prima forma normale (1NF) quando tutti i suoi attributi hanno un dominio atomico (cioe' sono valori elementari non ulteriormente scomponibili) che non possono ripetersi e per essi esiste una chiave primaria.
+      Una tabella e' in prima forma normale (1NF) quando tutti i suoi attributi hanno un dominio atomico (cioe' sono valori elementari non ulteriormente scomponibili) che non possono ripetersi e per essi esiste una chiave primaria.
     </p>
     <table border="1">
         <thead>
@@ -31,6 +47,7 @@
             <th>ID_Cliente</th>
             <th>Nominativo</th>
             <th>Prodotti acquistati</th>
+            <th>Prezzo</th>
           </tr>
         </thead>
         <tbody>
@@ -38,16 +55,19 @@
             <td>201</td>
             <td>Giuseppe Ferri</td>
             <td>Scheda USB</td>
+            <td>15.00</td>
           </tr>
           <tr>
             <td>202</td>
             <td>Claudia Moretti</td>
             <td>Speaker, Caricabatterie</td>
+            <td>50.00</td>
           </tr>
           <tr>
             <td>203</td>
             <td>Francesco Lupo</td>
             <td>Tablet, Cover</td>
+            <td>130.00</td>
           </tr>
         </tbody>
     </table>     
@@ -59,6 +79,7 @@
             <th>Nome</th>
             <th>Cognome</th>
             <th>Prodotti acquistati</th>
+            <th>Prezzo</th>
           </tr>
         </thead>
         <tbody>
@@ -67,49 +88,226 @@
             <td>Giuseppe</td>
             <td>Ferri</td>
             <td>Scheda USB</td>
+            <td>15.00</td>
           </tr>
           <tr>
             <td>202</td>
             <td>Claudia</td>
             <td>Moretti</td>
             <td>Speaker</td>
+            <td>25.00</td>
           </tr>
           <tr>
             <td>202</td>
             <td>Claudia</td>
             <td>Moretti</td>
             <td>Caricabatterie</td>
+            <td>5.00</td>
           </tr>
           <tr>
             <td>203</td>
             <td>Francesco</td>
             <td>Lupo</td>
             <td>Tablet</td>
+            <td>120.00</td>
           </tr>
           <tr>
             <td>203</td>
             <td>Francesco</td>
             <td>Lupo</td>
             <td>Cover</td>
+            <td>10.00</td>
           </tr>
         </tbody>
     </table>
+    <p>
+      In pratica, per rispettare la prima forma normale (1NF), e' necessario eliminare valori multipli o ripetuti in una singola cella, scomponendoli in righe distinte. <br>
+      La tabella iniziale non e' in 1NF poiche' alcune celle contengono piu' valori (es. "Speaker, Caricabatterie"), mentre quella riscritta rispetta la 1NF suddividendo ogni valore in righe separate e mantenendo un dominio atomico per ogni attributo.
+    </p>              
     <h2>2&deg; Forma normale (2NF)</h2>
     <p>
-        Una tabella e' in 2NF se e' in 1NF e non esistono, tra i possibili insiemi di attributi, dipendenze funzionali parziali, ma si hanno solo dipendenze funzionali complete: ogni attributo A che non fa parte della chiave primaria dipende funzionalmente dalla chiave primaria e non da un sottoinsieme di essa.
-    </p>    
-    <div class="container">
-
+      Una tabella e' in 2NF se e' in 1NF e non esistono, tra i possibili insiemi di attributi, dipendenze funzionali parziali, ma si hanno solo dipendenze funzionali complete: ogni attributo A che non fa parte della chiave primaria dipende funzionalmente dalla chiave primaria e non da un sottoinsieme di essa.
+    </p>
+    <div class="table-container">
+      <table border="1">
+        <thead>
+            <tr>
+                <th>ID_Cliente</th>
+                <th>Nome</th>
+                <th>Cognome</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>201</td>
+                <td>Giuseppe</td>
+                <td>Ferri</td>
+            </tr>
+            <tr>
+                <td>202</td>
+                <td>Claudia</td>
+                <td>Moretti</td>
+            </tr>
+            <tr>
+                <td>203</td>
+                <td>Francesco</td>
+                <td>Lupo</td>
+            </tr>
+        </tbody>
+      </table>
+      <table border="1">
+        <thead>
+            <tr>
+                <th>Prodotto</th>
+                <th>Prezzo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Scheda USB</td>
+                <td>15.00</td>
+            </tr>
+            <tr>
+                <td>Speaker</td>
+                <td>25.00</td>
+            </tr>
+            <tr>
+                <td>Caricabatterie</td>
+                <td>5.00</td>
+            </tr>
+            <tr>
+                <td>Tablet</td>
+                <td>120.00</td>
+            </tr>
+            <tr>
+                <td>Cover</td>
+                <td>10.00</td>
+            </tr>
+        </tbody>
+      </table>
     </div>
-    <p><i>
-        Il seguente codice HTML genera una tabella pitagorica utilizzando PHP per calcolare e popolare dinamicamente i valori. <br>
-        La tabella, stilizzata tramite CSS, presenta un layout centrato con bordi e uno sfondo grigio chiaro per l'intestazione. <br>
-        Ogni riga e colonna e' numerata da 1 a 10, con i valori calcolati come il prodotto dei rispettivi numeri. <br>
-    </i></p>
-    <button> <a href="index.html"> Home </a> </button>
-    <footer>
-        <p>Questa pagina dimostra manipolazioni avanzate su stringhe di asterischi utilizzando PHP.</p>
-        <p>File corrente: <strong>normalizzazione.html</strong></p>
-    </footer>
+    <p>
+      In pratica, quando una tabella che ha una chiave primaria composta (formata da piu' colonne) separa gli attributi che dipendono solo da una parte della chiave. <br>
+      Ad esempio, nella tabella mostrata sopra, i dati dei clienti e i dati dei prodotti vengono divisi in due tabelle distinte, evitando che le informazioni sui clienti influenzino i prodotti e viceversa, in modo tale che ogni attributo dipende dalla chiave primaria nella sua interezza.
+    </p>      
+    <h2>3&deg; Forma normale (3NF)</h2>
+    <p>Una tabella e' in 3NF quando e' in 2NF e non esistono attributi non appartenenti alla chiave primaria dipendenti transitivamente dalla chiave primaria.</p>  
+    <div class="table-container">
+      <table border="1">
+        <thead>
+            <tr>
+                <th>ID_Cliente</th>
+                <th>Nome</th>
+                <th>Cognome</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>201</td>
+                <td>Giuseppe</td>
+                <td>Ferri</td>
+            </tr>
+            <tr>
+                <td>202</td>
+                <td>Claudia</td>
+                <td>Moretti</td>
+            </tr>
+            <tr>
+                <td>203</td>
+                <td>Francesco</td>
+                <td>Lupo</td>
+            </tr>
+        </tbody>
+      </table>
+      <table border="1">
+        <thead>
+            <tr>
+                <th>ID_Prodotto</th>
+                <th>Nome Prodotto</th>
+                <th>Prezzo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>101</td>
+                <td>Scheda USB</td>
+                <td>15.00</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>Speaker</td>
+                <td>25.00</td>
+            </tr>
+            <tr>
+                <td>103</td>
+                <td>Caricabatterie</td>
+                <td>5.00</td>
+            </tr>
+            <tr>
+                <td>104</td>
+                <td>Tablet</td>
+                <td>120.00</td>
+            </tr>
+            <tr>
+                <td>105</td>
+                <td>Cover</td>
+                <td>10.00</td>
+            </tr>
+        </tbody>
+      </table>
+      <table border="1">
+        <thead>
+            <tr>
+                <th>ID_Cliente</th>
+                <th>ID_Prodotto</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>201</td>
+                <td>101</td>
+            </tr>
+            <tr>
+                <td>202</td>
+                <td>102</td>
+            </tr>
+            <tr>
+                <td>202</td>
+                <td>103</td>
+            </tr>
+            <tr>
+                <td>203</td>
+                <td>104</td>
+            </tr>
+            <tr>
+                <td>203</td>
+                <td>105</td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      In pratica, questo significa che, oltre ad essere in 2NF, ogni attributo non chiave deve dipendere direttamente dalla chiave primaria e non da un altro attributo non chiave. <br>
+      Nella tabella mostrata, le informazioni sui clienti, prodotti e gli acquisti sono separate in tabelle diverse, evitando che attributi come il nome del prodotto dipendano da altri attributi non chiave (es. prezzo). <br>
+      Cosi' facendo, ogni attributo dipende solo dalla chiave primaria.
+    </p>      
+    <h2>Forma Normale di Boyce-Codd (BCNF)</h2>
+    <p>
+      Una tabella e' in Forma Normale di Boyce-Codd (BCNF) se soddisfa la 3NF e, per ogni dipendenza funzionale non banale X &rarr; Y, X e' una superchiave. <br>
+      La BCNF e' piu' restrittiva della 3NF perche' elimina la condizione che consente a Y di essere un attributo primo. <br>
+      Ogni tabella in BCNF e' anche in 3NF, ma non sempre vale il contrario.
+    </p>
+  </div>  
+  <p><i>
+    Il seguente codice HTML mostra una pagina che descrive le diverse forme normali (1NF, 2NF, 3NF, BCNF) nel contesto della normalizzazione delle tabelle. <br>
+    La pagina e' stilizzata con CSS per centrare il contenuto, aggiungere bordi e migliorare la leggibilita'. <br>
+    Ogni forma normale e' spiegata tramite una tabella di esempio, con l'illustrazione delle modifiche necessarie per rispettare ciascuna forma normale. <br>
+    Inoltre, vengono presentati dei dati separati in piu' tabelle per evitare ridondanze e garantire la corretta organizzazione delle informazioni. <br>
+  </i></p>
+  <button> <a href="index.html"> Home </a> </button>
+  <footer>
+    <p>Questa pagina descrive il concetto di normalizzazione delle tabelle, esplorando le diverse forme normali (1NF, 2NF, 3NF, BCNF) e mostrando esempi pratici tramite tabelle.</p>
+    <p>File corrente: <strong>normalizzazione.html</strong></p>
+  </footer>  
 </body>
 </html>

@@ -26,6 +26,7 @@ html, body {
 }
 
 table {
+    display: block;
     border-collapse: collapse;
     width: 50%;
     margin: 20px auto;

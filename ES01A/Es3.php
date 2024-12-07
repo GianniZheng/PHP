@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>Stringa</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <style>
         .container {
             font-family: monospace;

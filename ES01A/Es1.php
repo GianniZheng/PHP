@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
     <title>Tabella pitagorica</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <style>
         th, td {
             padding: 8px;

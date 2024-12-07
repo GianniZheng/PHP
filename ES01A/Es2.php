@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
     <title>Messaggio di benvenuto</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <?php

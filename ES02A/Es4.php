@@ -6,36 +6,16 @@
 </head>
 <body>
   <h3>Accesso a pagina riservata</h3>
-  <?php
-  if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["sign-username"]) && isset($_POST["sign-password"])) {
-  ?>
-    <form action="login.php" method="post">
-      <label for="nomeutente" ><b>Username</b></label>
-      <input type="text" id="nomeutente" name="nomeutente" placeholder="Inserisci il nome utente" /><br />
-      <br>
-      <label for="password"><b>Password</b></label>
-      <input type="password" id="password" name="password" placeholder="Inserisci la password" /><br />
-      <br>
-      <input name="submit" type="submit" value="Invia" />
-      <br>
-    </form>
-  <?php
-  } else {
-  ?>
-    <h2>Sign up</h2>
-    <form action="" method="post">
-      <label for="sign-username" ><b>Nome utente</b></label>
-      <input type="text" id="sign-username" name="sign-username" placeholder="Inserisci il nome utente" /><br />
-      <br>
-      <label for="sign-password"><b>Password</b></label>
-      <input type="password" id="sign-password" name="sign-password" placeholder="Inserisci la password" /><br />
-      <br>
-      <input name="submit" type="submit" value="Invia" />
-      <br>
-    </form>
-  <?php
-  }
-  ?>
+  <form action="login.php" method="post">
+    <label for="username" ><b>Username</b></label>
+    <input type="text" id="nomeutente" name="nomeutente" placeholder="Inserisci il nome utente" /><br />
+    <br>
+    <label for="password"><b>Password</b></label>
+    <input type="password" id="password" name="password" placeholder="Inserisci la password" /><br />
+    <br>
+    <input name="submit" type="submit" value="Invia" />
+    <br>
+  </form>
   <p><i>
     Il seguente codice HTML con integrazione PHP implementa una semplice pagina di login per accedere a un'area riservata. <br>
     Quando l'utente invia il modulo, i dati vengono elaborati tramite il metodo POST. <br>

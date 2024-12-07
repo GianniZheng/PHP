@@ -1,18 +1,8 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <title>Tabella pitagorica</title>
     <link rel="stylesheet" href="../style.css">
-    <style>
-        th, td {
-            padding: 8px;
-            border: 1px solid #000;
-        }
-
-        th {
-            background-color: #ddd;
-        }
-    </style>
+    <title>Tabella pitagorica</title>
 </head>
 <body>
     <table>

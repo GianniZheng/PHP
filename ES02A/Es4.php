@@ -5,10 +5,10 @@
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <h3>Accesso a pagina riservata</h3>
   <?php
   if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["sign-username"]) && isset($_POST["sign-password"])) {
   ?>
+    <h3>Accesso a pagina riservata</h3>
     <form action="login.php" method="post">
       <label for="nomeutente" ><b>Username</b></label>
       <input type="text" id="nomeutente" name="nomeutente" placeholder="Inserisci il nome utente" /><br />

@@ -4,16 +4,9 @@
     <title>Genera Tabella</title>
     <link rel="stylesheet" href="../style.css">
     <style>
-        th, td {
-            border: 1px solid black;
-            text-align: center;
-            padding: 8px;
+        table {
+            margin: 20px auto;
         }
-
-        th {
-            background-color: #f2f2f2;
-        }
-
         form {
             text-align: center;
             margin-top: 20px;

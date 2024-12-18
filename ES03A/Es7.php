@@ -2,16 +2,13 @@
 <html lang="it">
 <head>
     <title>Validitazione dei dati</title>
-    <style>
-
-    </style>
 </head>
 <body>
     <form action="" method="post">
         <label for="name"><b>Nome</b></label>
         <input type="text" id="name" name="name" pattern="[A-Za-z\s]+" placeholder="Inserisci il tuo nome" required><br><br>
         <label for="surname"><b>Cognome</b></label>
-        <input type="text" id="surname" name="surname" pattern="[A-Za-z\s']" placeholder="Inserisci il tuo cognome" required><br><br>
+        <input type="text" id="surname" name="surname" pattern="[A-Za-z\s']+" placeholder="Inserisci il tuo cognome" required><br><br>
         <label for="birthdate"><b>Data di nascita'</b></label>
         <input type="date" id="birthdate" name="birthdate" required><br><br>
         <label for="fiscal-code"><b>Codice fiscale</b></label>

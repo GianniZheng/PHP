@@ -17,13 +17,15 @@
       <input type="password" id="password" name="password" placeholder="Inserisci la password" /><br />
       <br>
       <input name="submit" type="submit" value="Invia" />
-      <br>
+      <br><!-- Aggiungi i dati del sign-up al form di login -->
+    <input type="hidden" name="sign-username" id="sign-username" value="<?php echo $_POST["sign-username"]; ?>" />
+    <input type="hidden" name="sign-password" id="sign-password" value="<?php echo $_POST["sign-password"]; ?>" />
     </form>
   <?php
   } else {
   ?>
     <h2>Sign up</h2>
-    <form action="" method="post">
+    <form action="Es4.php" method="post">
       <label for="sign-username" ><b>Nome utente</b></label>
       <input type="text" id="sign-username" name="sign-username" placeholder="Inserisci il nome utente" /><br />
       <br>

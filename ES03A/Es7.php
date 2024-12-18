@@ -4,7 +4,7 @@
     <title>Validitazione dei dati</title>
 </head>
 <body>
-    <form action="" method="post">
+    <form action="validation.php" method="post">
         <label for="name"><b>Nome</b></label>
         <input type="text" id="name" name="name" pattern="[A-Za-z\s]+" placeholder="Inserisci il tuo nome" required><br><br>
         <label for="surname"><b>Cognome</b></label>

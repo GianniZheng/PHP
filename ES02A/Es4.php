@@ -18,8 +18,8 @@
       <br>
       <input name="submit" type="submit" value="Invia" />
       <br><!-- Aggiungi i dati del sign-up al form di login -->
-    <input type="hidden" name="sign-username" id="sign-username" value="<?php echo $_POST["sign-username"]; ?>" />
-    <input type="hidden" name="sign-password" id="sign-password" value="<?php echo $_POST["sign-password"]; ?>" />
+      <input type="hidden" name="sign-username" id="sign-username" value="<?php echo $_POST["sign-username"]; ?>" />
+      <input type="hidden" name="sign-password" id="sign-password" value="<?php echo $_POST["sign-password"]; ?>" />
     </form>
   <?php
   } else {

@@ -33,7 +33,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $fiscalCode = htmlspecialchars(trim($_POST['fiscal-code'] ?? ''));
     $email = htmlspecialchars(trim($_POST['email'] ?? ''));
     $phoneNumber = htmlspecialchars(trim($_POST['phone-number'] ?? ''));
-    $address = htmlspecialchars(trim($_POST['andress'] ?? ''));
     $street = htmlspecialchars(trim($_POST['street'] ?? ''));
     $cap = htmlspecialchars(trim($_POST['cap'] ?? ''));
     $city = htmlspecialchars(trim($_POST['city'] ?? ''));
@@ -68,7 +67,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "<li><b>Codice fiscale:</b> $fiscalCode</li>";
         echo "<li><b>Email:</b> $email</li>";
         echo "<li><b>Numero di telefono:</b> $phoneNumber</li>";
-        echo "<li><b>Indirizzo:</b> $address</li>";
         echo "<li><b>Via/Piazza:</b> $street</li>";
         echo "<li><b>CAP:</b> $cap</li>";
         echo "<li><b>Comune:</b> $city</li>";

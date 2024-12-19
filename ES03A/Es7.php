@@ -32,18 +32,16 @@
         <input type="text" id="email" name="email" placeholder="Inserisci la tua email" required><br><br>
         <label for="phone-number"><b>Numero di telefono</b></label>
         <input type="tel" id="phone-number" name="phone-number" pattern="^(\+39)?[0-9]{10}$"><br><br>
-        <label for="andress"><b>Indirizzo</b></label>
-        <input type="text" id="andress" name="andress" placeholder="Inserisci la tua Via"><br><br>
         <label for="street"><b>Via/Piazza</b></label>
         <input type="text" id="street" name="street" placeholder="Inserisci via o piazza" required><br><br>
         <label for="cap"><b>Cap</b></label>
-        <input type="text" id="cap" name="cap" placeholder="Inserisci CAP" pattern="^\d{5}$" required><br><br>
+        <input type="text" id="cap" name="cap" pattern="^\d{5}$" placeholder="Inserisci il CAP" required><br><br>
         <label for="city"><b>Comune</b></label>
         <input type="text" id="city" name="city" placeholder="Inserisci il comune" required><br><br>
         <label for="province"><b>Provincia</b></label>
         <input type="text" id="province" name="province" placeholder="Inserisci la provincia" required><br><br>
-        <label for="nomeutente"><b>Username</b></label>
-        <input type="text" id="nomeutente" name="nomeutente" pattern="^(?!.*\b(name|surname)\b)[A-Za-z0-9]+$"  placeholder="Inserisci il nome utente"><br><br>
+        <label for="username"><b>Username</b></label>
+        <input type="text" id="username" name="username" pattern="^(?!.*\b(name|surname)\b)[A-Za-z0-9]+$"  placeholder="Inserisci il nome utente"><br><br>
         <label for="password"><b>Password</b></label>
         <input type="password" id="password" name="password" pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$" placeholder="Inserisci la password"><br><br>
         <input name="submit" type="submit" value="Invia" />

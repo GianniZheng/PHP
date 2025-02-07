@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>Esercizio SQL e PHP</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <h1 style="font-family: 'Righteous', sans-serif;">Gestione Articoli e Ordini</h1>
